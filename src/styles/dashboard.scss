@@ -1,0 +1,86 @@
+$sidebarBackground : #353b40;
+$seperator : #484e53;
+$textLight : #e2e9eb;
+
+
+*:active,
+*:focus {
+    outline: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "sans", Arial, sans-serif;
+}
+
+
+body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    display: flex;
+
+
+    border: 2px solid red;
+}
+
+#sidebar {
+    border: 2px solid green;
+    padding: 1rem;
+    background-color: $sidebarBackground;
+    color: $textLight;
+
+    width: 15rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    row-gap: 0.5rem;
+
+
+    .profile i {
+        font-size: 2rem !important;
+    }
+    
+
+
+    .seperator {
+        position: relative;
+        width: 100%;
+        margin: 0.3rem auto;
+        height: 1px;
+        background-color: $seperator;
+    }
+
+    .sidebarTab {
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        column-gap: 0.5rem;
+        width: 100%;
+        text-align: left;
+        font-size: 1rem;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        transition: all 200ms ease;
+
+        i {
+            font-size: 1.2rem;
+        }
+    }
+
+    .sidebarTab:hover{
+        background-color: #474d52;
+    }
+}
