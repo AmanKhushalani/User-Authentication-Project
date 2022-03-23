@@ -7,7 +7,7 @@
   display: none;
 }
 
-#login {
+.login {
   font-family: "sans", Arial, sans-serif;
   background-color: #3f8ddc;
   position: fixed;
@@ -31,7 +31,7 @@
           flex-direction: column;
 }
 
-#login form {
+.login form {
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -43,7 +43,7 @@
   row-gap: 1.2rem;
 }
 
-#login form .form_div_holder {
+.login form .form_div_holder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,11 +59,11 @@
   color: #fff;
 }
 
-#login form .form_div_holder .form_label {
+.login form .form_div_holder .form_label {
   font-size: 0.8rem;
 }
 
-#login form .form_div_holder input {
+.login form .form_div_holder input {
   padding: 0.3rem 0.5rem;
   font-size: 1.2rem;
   border: none;
@@ -72,12 +72,12 @@
   margin: auto;
 }
 
-#login form .form_div_holder input:focus,
-#login form .form_div_holder input:active {
+.login form .form_div_holder input:focus,
+.login form .form_div_holder input:active {
   outline: none;
 }
 
-#login form .form_div_holder button {
+.login form .form_div_holder button {
   padding: 0.5rem 2rem;
   margin: auto;
   border: none;
@@ -88,7 +88,7 @@
   transition: all 200ms ease;
 }
 
-#login form .form_div_holder button:hover {
+.login form .form_div_holder button:hover {
   background-color: #163961;
 }
 
@@ -102,5 +102,11 @@
           align-items: center;
   color: #fff;
   margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 550px) {
+  .logo_container {
+    font-size: 2rem;
+  }
 }
 /*# sourceMappingURL=login.css.map */

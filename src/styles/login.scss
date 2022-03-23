@@ -11,7 +11,7 @@ $authenticate_button_dark : #163961;
     display: none;
 }
 
-#login {
+.login {
     font-family: "sans", Arial, sans-serif;
     background-color: $background_blue;
 
@@ -84,4 +84,12 @@ $authenticate_button_dark : #163961;
     align-items: center;
     color: #fff;
     margin-bottom: 2rem;
+}
+
+
+@media screen and (max-width:550px) {
+    .logo_container{
+        font-size: 2rem;
+    }
+    
 }
