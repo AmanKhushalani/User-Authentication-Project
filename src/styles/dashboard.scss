@@ -1,7 +1,9 @@
-$sidebarBackground : #353b40;
-$seperator : #484e53;
-$textLight : #e2e9eb;
-
+@mixin flex($direction : "row") {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
 
 *:active,
 *:focus {
@@ -34,54 +36,13 @@ body {
     border: 2px solid red;
 }
 
-#sidebar {
-    border: 2px solid green;
-    padding: 1rem;
-    background-color: $sidebarBackground;
-    color: $textLight;
 
-    width: 15rem;
+
+#dashboard{
+    position: fixed;
     height: 100%;
-
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     justify-content: flex-start;
-    row-gap: 0.5rem;
-
-
-    .profile i {
-        font-size: 2rem !important;
-    }
-    
-
-
-    .seperator {
-        position: relative;
-        width: 100%;
-        margin: 0.3rem auto;
-        height: 1px;
-        background-color: $seperator;
-    }
-
-    .sidebarTab {
-        padding: 0.5rem;
-        display: flex;
-        align-items: center;
-        column-gap: 0.5rem;
-        width: 100%;
-        text-align: left;
-        font-size: 1rem;
-        border-radius: 0.3rem;
-        cursor: pointer;
-        transition: all 200ms ease;
-
-        i {
-            font-size: 1.2rem;
-        }
-    }
-
-    .sidebarTab:hover{
-        background-color: #474d52;
-    }
+    border: 2px solid blue;
 }

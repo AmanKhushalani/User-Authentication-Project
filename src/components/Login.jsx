@@ -1,25 +1,38 @@
 import { useState } from "react";
+import { Navigate, withRouter } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import {verifyUser} from '../Js/verifyUser'
 
 const Login = () => {
 
-    const [formData , changeFormData] = useState({
-        userid : "",
-        password : ""
+    const [formData, changeFormData] = useState({
+        userid: "",
+        password: ""
     })
 
-    const updateFormData = (e)=>{
-        changeFormData((prevValue)=>{
+
+    const updateFormData = (e) => {
+        changeFormData((prevValue) => {
             return {
                 ...prevValue,
-                [e.target.name] : e.target.value
+                [e.target.name]: e.target.value
             }
         })
     }
 
+    const navigate = useNavigate()
 
-    const submit = (e)=>{
+    const submit = (e) => {
         e.preventDefault()
-        console.log(formData);
+        if (formData.userid == "aman" && formData.password == "aman") {
+            localStorage.setItem("login" , "true")
+            navigate('/dashboard/profile')
+        }
+    }
+
+    if(verifyUser() == "true")
+    {
+        return <Navigate replace to={'/dashboard/profile'} />;
     }
 
     return <>
@@ -32,7 +45,7 @@ const Login = () => {
                 </div>
                 <div className="form_div_holder">
                     <div className="form_label">Password</div>
-                    <input type="password" className="form_input" required name="password" value={formData.password} onChange={updateFormData}/>
+                    <input type="password" className="form_input" required name="password" value={formData.password} onChange={updateFormData} />
                 </div>
                 <div className="form_div_holder">
                     <button className="authenticate_button">Submit</button>

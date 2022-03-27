@@ -28,65 +28,16 @@ body {
   border: 2px solid red;
 }
 
-#sidebar {
-  border: 2px solid green;
-  padding: 1rem;
-  background-color: #353b40;
-  color: #e2e9eb;
-  width: 15rem;
+#dashboard {
+  position: fixed;
   height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  row-gap: 0.5rem;
-}
-
-#sidebar .profile i {
-  font-size: 2rem !important;
-}
-
-#sidebar .seperator {
-  position: relative;
-  width: 100%;
-  margin: 0.3rem auto;
-  height: 1px;
-  background-color: #484e53;
-}
-
-#sidebar .sidebarTab {
-  padding: 0.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-column-gap: 0.5rem;
-          column-gap: 0.5rem;
-  width: 100%;
-  text-align: left;
-  font-size: 1rem;
-  border-radius: 0.3rem;
-  cursor: pointer;
-  -webkit-transition: all 200ms ease;
-  transition: all 200ms ease;
-}
-
-#sidebar .sidebarTab i {
-  font-size: 1.2rem;
-}
-
-#sidebar .sidebarTab:hover {
-  background-color: #474d52;
+  border: 2px solid blue;
 }
 /*# sourceMappingURL=dashboard.css.map */

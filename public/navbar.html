@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/styles/navbar.css">
+    <link rel="stylesheet" href="../src/styles/dashboard.css">
+    <link rel="stylesheet" href="../src/styles/sidebar.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>Dashboard</title>
+</head>
+<body>
+
+    <div id="navbar">
+        <div id="subNavbar">
+            <div id="toggleButton">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+    
+            <div class="logoName">Admino</div>
+        </div>
+        <div id="navlinkContainer">
+            <div class="sidebarTab"><i class='bx bxs-user-circle' ></i> Profile</div>
+            <div class="sidebarTab"><i class='bx bxs-user-rectangle'></i> Users</div>
+            <div class="sidebarTab"><i class='bx bxs-chat' ></i>Messages</div>
+        </div>
+    </div>
+
+
+</body>
+</html>
+
+
+<script src="../src/Js/jquery.js"></script>
+<script>
+
+    var active = false;
+    $("#toggleButton").click(()=>{
+        if(active)
+        {
+            $(".line").css("transform" , "rotate(0deg)");
+            setTimeout(function(){
+                $(".line:nth-child(2)").css({"top" : "50%"})
+                $(".line:last-child").css({"top" : "80%"})
+                $(".line:first-child").css({"top" : "20%"})
+            } , 300)
+        }
+        else
+        {
+            $(".line").css({"top" : "50%"})
+            setTimeout(function(){
+                $(".line:nth-child(2)").css({"transform" : "rotate(45deg)"})
+                $(".line:last-child").css({"transform" : "rotate(-45deg)"})
+                $(".line:first-child").css({"transform" : "rotate(-45deg)"})
+            } , 300)
+        }
+        
+
+        active = !active;
+    })
+
+</script>

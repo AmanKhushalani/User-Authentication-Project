@@ -1,0 +1,70 @@
+$sidebarBackground : #353b40;
+$seperator : #484e53;
+$textLight : #e2e9eb;
+$background_blue : #3f8ddc;
+$authenticate_button : #275991;
+$authenticate_button_dark : #163961;
+
+#navbar{
+
+    position: relative;
+    top: 0;
+    border:2px solid red;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+
+    background-color: $background_blue;
+
+
+    #subNavbar{
+        display: flex; 
+        column-gap: 1rem; 
+        align-items: center;
+        padding: 1rem;
+    }
+    
+    .logoName{
+        font-size: 1.8rem;
+        color: #fff;
+    }
+}
+
+#toggleButton{
+    // border: 2px solid green;
+    width: 2rem;
+    height: 2rem;
+    
+    position: relative;
+    cursor: pointer;
+}
+.line{
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform-origin: center;
+    
+    transition: all 200ms ease;
+}
+.line:nth-child(2){
+    top: 50%;
+}
+.line:last-child{
+    top: 80%;
+}
+
+
+#navlinkContainer{
+    margin-top: 0.5rem;
+    border: 2px solid red;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+
+    transition: 300ms ease;
+}

@@ -6,6 +6,8 @@ import App from './App';
 import './styles/main.css'
 import './styles/login.css'
 import './styles/dashboard.css'
+import './styles/sidebar.css'
+import './styles/mainContainer.css'
 import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
